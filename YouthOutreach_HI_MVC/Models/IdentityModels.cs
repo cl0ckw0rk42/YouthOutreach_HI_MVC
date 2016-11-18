@@ -29,5 +29,7 @@ namespace YouthOutreach_HI_MVC.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<YouthOutreach_HI_MVC.Models.Donations> Donations { get; set; }
     }
 }

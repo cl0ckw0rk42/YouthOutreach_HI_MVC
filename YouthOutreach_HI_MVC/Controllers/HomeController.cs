@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace YouthOutreach_HI_MVC.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
