@@ -36,6 +36,7 @@ namespace YouthOutreach_HI_MVC.Controllers
         }
 
         // GET: Donations/Create
+        [Authorize(Roles = "canEdit")]
         public ActionResult Create()
         {
             return View();
@@ -44,8 +45,10 @@ namespace YouthOutreach_HI_MVC.Controllers
         // POST: Donations/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "canEdit")]
         public ActionResult Create([Bind(Include = "DonationId,Category,Name,Quantity,Hot")] Donations donations)
         {
             if (ModelState.IsValid)
@@ -59,6 +62,7 @@ namespace YouthOutreach_HI_MVC.Controllers
         }
 
         // GET: Donations/Edit/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
