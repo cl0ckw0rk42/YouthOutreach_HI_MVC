@@ -194,6 +194,9 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\ie8.css" />
+    <Content Include="assets\css\main.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -273,10 +276,15 @@
     <Content Include="Views\Donations\Edit.cshtml" />
     <Content Include="Views\Donations\Index.cshtml" />
     <Content Include="Views\Home\Sent.cshtml" />
+    <Content Include="Views\Home\Biography.cshtml" />
+    <Content Include="Views\Home\DIY.cshtml" />
+    <Content Include="Views\Home\Internships.cshtml" />
+    <Content Include="Views\Home\Contributors.cshtml" />
+    <Content Include="Views\Home\Volunteer.cshtml" />
+    <Content Include="Views\Home\Events.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\css\" />
     <Folder Include="assets\fonts\" />
     <Folder Include="assets\js\" />
     <Folder Include="assets\sass\" />

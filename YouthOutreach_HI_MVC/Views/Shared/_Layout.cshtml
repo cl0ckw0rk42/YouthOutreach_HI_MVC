@@ -6,41 +6,70 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    
+    @*<link rel="stylesheet" href="~/assets/css/main.css" />
+        DopeTrope stylesheet*@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("YO", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Donations", "Index","Donations")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            @Html.ActionLink("YO!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Who We Are
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>@Html.ActionLink("About YO!", "About", "Home", new { area = "" }, null)</li>
+                                        <li>@Html.ActionLink("Meet the Staff", "Biography", "Home", new { area = "" }, null)</li>
+                                        <li>@Html.ActionLink("Contact Us", "Contact", "Home", new { area = "" }, null)</li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Ways You Can Help
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li>@Html.ActionLink("Donate", "Index", "Donations", new { area = "" }, null)</li>
+                                        <li>@Html.ActionLink("Volunteer Your Time", "Volunteer", "Home", new { area = "" }, null)</li>
+                                        <li>@Html.ActionLink("Become an Intern", "Internships", "Home", new { area = "" }, null)</li>
+                                    </ul>
+                                </li>
+                                                          
+                                <li>@Html.ActionLink("Contributors", "Contributors", "Home")</li>
+                                <li>@Html.ActionLink("DIY", "DIY", "Home")</li>
+                                <li>@Html.ActionLink("Events", "Events", "Home")</li>
+                            </ul>
+                            @Html.Partial("_LoginPartial")
+                        </div>
+                    </div>
+                </div>
+
+            <div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - Curated by Junior League of Hawaii, Created and maintained by Dan Boggs.</p>
+                    <p>HTML/CSS template curteousy of <a href="http://www.html5up.net">HTML5Up</a></p>
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
 </body>
 </html>
